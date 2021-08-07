@@ -18,3 +18,7 @@ provider "aws" {
     profile = "default"
    
 }
+
+# resources
+
+resources 
