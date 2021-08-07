@@ -53,6 +53,8 @@ terraform {
  }
 }
 # provider block
+# This configuration assumes the aws credential is already configured
+
 provider "aws" {
     region  = "us-east-1"
     share_credentials = "$HOME/.aws/credentials"
