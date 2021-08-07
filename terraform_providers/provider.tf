@@ -1,7 +1,7 @@
 # terraform provider block
 terraform {
     # the required version of terraform must be same as terraform cli
-   # required_version = "~> 0.14"
+   required_version = "~> 1.0.0"
 
    # the required_providers downloads all the plugins that is required and does not need required_version.
    # required_version is the terrraform cli which is independent on required_providers
