@@ -1,4 +1,4 @@
-# Create S3 Bucket with meta argument for_each
+# Create S3 Bucket with meta argument for_each "maps"
 
 resource "aws_s3_bucket" "feed-bucket" {
   for_each = {
