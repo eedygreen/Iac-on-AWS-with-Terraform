@@ -37,16 +37,17 @@ resource "aws_route_table" "tf-vpc-route-table" {
 
 # route
 resource "aws_route" "tf-vpc-route" {
-  route_table_id = aws_route_table.tf-vpc-route_table.id
-  destination_cidr_block = "10.0.0.0/0"
+  route_table_id = aws_route_table.tf-vpc-route-table.id
+  destination_cidr_block = "0.0.0.0/0"
   gateway_id = aws_internet_gateway.tf-vpc-igw.id
   depends_on = [ aws_route_table.tf-vpc-route-table ]
 }
 
 # route table association
-resource "route_table_id_association" "tf-vpc-route_table-associate" {
-  route_table_id = aws_route_table.tf-vpc-route_table.id
-  subnet_id      = aws_subnet.tf-vpc-public-subnet.id
+resource "aws_route_table_association" "route-table-associate" {
+  #subnet_id      = aws_subnet.tf-vpc-public-subnet.id
+  gateway_id     = aws_internet_gateway.tf-vpc-igw.id #optional, either one of the thes subnet_id or gateway_id.
+  route_table_id = aws_route_table.tf-vpc-route-table.id
 }
 
 # security group
