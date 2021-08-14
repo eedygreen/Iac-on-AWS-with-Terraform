@@ -27,15 +27,15 @@
 
 # VARIABLE DECLARATION, check the variables.tf file
 
-# terraform.tfvars overides other variables,such as the one in variables.tf file
+# terraform.tfvars overides other variables, such as the one in variables.tf file
 - If the terraform.tfvars file is present terraform auto-load it and overide the default values from variable.tf file.
 
 - Other names with *.tfvars requires explicit argument when terraform planning and or applying. e.g web.tfvars, dev.tfvars, stage.tfvars, prod.tfvars
-- ```terraform plan -var-file="dev.tfvars"```
-- ```terraform apply -var-file="dev.tfvars"```
+```terraform plan -var-file="dev.tfvars"```
+```terraform apply -var-file="dev.tfvars"```
 
 # Auto Load Input variables with .auto.tfvars
 - .auto.tfvars is loaded during the configuraiton and overides any other variable file, including terraform.tfvars. With this the var-file command line argument is not required. The above var files can be named as the following; web.auto.tfvars, dev.auto.tfvars, stage.auto.tfvars, prod.auto.tfvars.
-```terraform init``
+```terraform init```
 ```terraform plan```
 ```terraform apply```
