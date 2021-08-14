@@ -14,5 +14,4 @@
 
 ```terraform apply change.plan```
 
-| Note: variable overriding add the new values to the default value
-| i.e if the default value is 1 with supply value of 3, the output will be 4
+| Note: variable overriding add the new values to the default value. i.e if the default value is 1 with supply value of 3, the output will be 4
