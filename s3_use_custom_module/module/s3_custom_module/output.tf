@@ -1,19 +1,19 @@
-output "S3_arn" {
+output "arn" {
   description = "ARN of the S3 Bucket"
   value       = aws_s3_bucket.s3_bucket.arn
 }
 
-output "S3_name" {
+output "name" {
   description = "The Name of the S3 bucket"
   value       = aws_s3_bucket.s3_bucket.id
 }
 
-output "S3_domain" {
+output "domain" {
   description = "The domain Name of the S3 bucket"
   value       = aws_s3_bucket.s3_bucket.website_domain
 }
 
-output "S3_endpoint" {
+output "endpoint" {
   description = "The endpoint of the S3 bucket"
   value       = aws_s3_bucket.s3_bucket.website_endpoint
 }
