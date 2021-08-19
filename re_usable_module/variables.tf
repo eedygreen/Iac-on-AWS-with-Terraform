@@ -11,3 +11,8 @@ variable "bucket_tags" {
   default     = {}
 }
 
+variable "aws_region" {
+  description = "The region for provisioning the bucket"
+  type        = string
+  default     = "us-east-1"
+}
