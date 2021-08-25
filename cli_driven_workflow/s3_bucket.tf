@@ -2,7 +2,7 @@
 
 module "website" {
   source  = "app.terraform.io/website-modules/website/module"
-  version = "1.0.3"
+  version = "1.0.4"
   s3_bucket_name = var.bucket_name
   s3_tags  = var.bucket_tags
   aws_region = var.aws_region
