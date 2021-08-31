@@ -1,0 +1,3 @@
+[submodule "Iac-policy-wtih-sentinel"]
+	path = Iac-policy-wtih-sentinel
+	url = git@github.com:eedygreen/Iac-policy-wtih-sentinel.git
