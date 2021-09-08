@@ -4,3 +4,6 @@
 [submodule "terraform-cloud-vcs"]
 	path = terraform-cloud-vcs
 	url = git@github.com:eedygreen/terraform-cloud-vcs.git
+[submodule "terraform-module-website"]
+	path = terraform-module-website
+	url = git@github.com:eedygreen/terraform-module-website.git
