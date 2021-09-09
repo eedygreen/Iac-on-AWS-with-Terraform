@@ -10,5 +10,5 @@ resource "aws_instance" "apache-webserver" {
   }
   vpc_security_group_ids = [aws_security_group.vpc-ssh.id, aws_security_group.vpc-web.id]
   # user_data = file("script.sh")
-  user_data = templatefile("user_data.tmpl", {package_name = var.package_name})
+  user_data = templatefile("user_data.tmpl", { package_name = var.package_name })
 }
