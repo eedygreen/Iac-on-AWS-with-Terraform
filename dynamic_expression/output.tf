@@ -15,7 +15,7 @@ output "security_groups_ids" {
 
 output "tags" {
   description = "The EC2 instances tags"
-  value = aws_instance.apache-webserver[*].tags
+  value       = aws_instance.apache-webserver[*].tags
 }
 
 # Note: splat expression, this is the [*] recent way of doing it
