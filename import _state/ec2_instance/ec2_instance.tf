@@ -5,6 +5,7 @@ resource "aws_instance" "eedy_instance" {
 
 /*
 on cli, run the command below to create terraform.state file
+
 terraform import aws_instance.eedy_instance EC2_instance_id
 terraform import aws_instance.eedy_instance i-0427ff01364ae21
 
