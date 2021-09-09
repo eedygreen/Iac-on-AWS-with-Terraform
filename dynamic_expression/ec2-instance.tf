@@ -3,10 +3,10 @@ resource "random_id" "id" {
 }
 
 locals {
-  name = (var.name != "" ? var.name : random_id.id.hex)
+  name  = (var.name != "" ? var.name : random_id.id.hex)
   owner = var.team
-  common_tags =  {
-    Owner = local.owner
+  common_tags = {
+    Owner       = local.owner
     DefaultUser = local.name
   }
 }
@@ -15,11 +15,11 @@ locals {
 # EC2 instance as apache web server
 
 resource "aws_instance" "apache-webserver" {
-  ami           = var.ec2_ami_id
-  instance_type = var.ec2_instance_type[1]
-  key_name      = "terraform-key" # The key must be created before applying it here
-  count         = (var.high_availability == true ? 2 : 1)
-  tags = local.common_tags
+  ami                    = var.ec2_ami_id
+  instance_type          = var.ec2_instance_type[1]
+  key_name               = "terraform-key" # The key must be created before applying it here
+  count                  = (var.high_availability == true ? 2 : 1)
+  tags                   = local.common_tags
   vpc_security_group_ids = [aws_security_group.vpc-ssh.id, aws_security_group.vpc-web.id]
   # user_data = file("script.sh")
   user_data = templatefile("user_data.tmpl", { package_name = var.package_name })

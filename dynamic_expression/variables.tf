@@ -37,24 +37,26 @@ variable "package_name" {
 
 variable "availability_zones" {
   description = "Availability zones for the web servers"
-  type = list(string)
-  default = ["us-east-1", "us-east-2", "us-west-1"]
+  type        = list(string)
+  default     = ["us-east-1", "us-east-2", "us-west-1"]
 }
 
 variable "high_availability" {
   description = "High Availability instance"
-  type = bool
-  default = false
+  type        = bool
+  #default = false
+  default = true #this enables high availability and creation of loadBalancer
 }
 
 variable "name" {
   description = "The name associated to the instance"
-  type = string
-  default = "ec2-user"
+  type        = string
+  #default = "ec2-user"
+  default = "" #
 }
 
 variable "team" {
   description = "Team responsible for provisioning the infrastructure"
-  type = string
-  default = "Green"
+  type        = string
+  default     = "Green"
 }

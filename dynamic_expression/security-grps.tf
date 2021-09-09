@@ -3,29 +3,29 @@ resource "aws_elb" "web_elb" {
   name = "apache-web"
 
   listener {
-    instance_port = 80
+    instance_port     = 80
     instance_protocol = "http"
-    lb_port = 80
-    lb_protocol = "http"
+    lb_port           = 80
+    lb_protocol       = "http"
   }
 
   health_check {
-    healthy_threshold = 2
+    healthy_threshold   = 2
     unhealthy_threshold = 2
-    timeout = 3
-    target = "HTTP:80/"
-    interval = 30
+    timeout             = 3
+    target              = "HTTP:80/"
+    interval            = 30
   }
-  
+
   # splat expression
-  instances = aws_instance.apache-webserver[*].id 
+  instances = aws_instance.apache-webserver[*].id
   # dynamic expression
-  count = (var.availability_zones == true ? 1 : 0) 
-  idle_timeout = 400
-  connection_draining = true
+  count                       = (var.availability_zones == true ? 1 : 0)
+  idle_timeout                = 400
+  connection_draining         = true
   connection_draining_timeout = 400
-  availability_zones = var.availability_zones
-  tags = local.common_tags
+  availability_zones          = var.availability_zones
+  tags                        = local.common_tags
 }
 
 # SSH security group
