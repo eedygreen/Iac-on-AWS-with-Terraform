@@ -1,7 +1,6 @@
 # README.md
 
 ```
-
 .
 ├── cli_driven_workflow
 │   ├── output.tf
@@ -19,6 +18,19 @@
 │   ├── provider.tf
 │   ├── README.md
 │   └── s3_bucket.tf
+├── dynamic_block
+│   ├── dynamic-block-for-security-grp.tf
+│   ├── provider.tf
+│   └── security-grps.tf
+├── dynamic_expression
+│   ├── ec2-instance.tf
+│   ├── output.tf
+│   ├── provider.tf
+│   ├── security-grps.tf
+│   ├── terraform.tfvars
+│   ├── user_data.tmpl
+│   ├── variables.tf
+│   └── vpc.tf
 ├── Iac-policy-wtih-sentinel
 │   ├── check-versions.sentinel
 │   ├── LICENSE
@@ -29,6 +41,13 @@
 │   ├── sentinel.hcl
 │   ├── variables.tf
 │   └── versions.tf
+├── import _state
+│   ├── ec2_instance
+│   │   ├── ec2_instance.tf
+│   │   └── versions.tf
+│   └── s3_bucket
+│       ├── s3_bucket.tf
+│       └── versions.tf
 ├── LICENSE
 ├── local
 │   ├── provider.tf
@@ -101,6 +120,39 @@
 │   ├── s3_bucket.tf
 │   ├── variables.tf
 │   └── versions.tf
+├── templatefile
+│   ├── ec2-instance.tf
+│   ├── output.tf
+│   ├── provider.tf
+│   ├── security-grps.tf
+│   ├── terraform.tfvars
+│   ├── user_data.tmpl
+│   ├── variables.tf
+│   └── vpc.tf
+├── terraform-cloud-vcs
+│   ├── ami_data_source.tf
+│   ├── ec2-instance.tf
+│   ├── install_server.sh
+│   ├── LICENSE
+│   ├── output.tf
+│   ├── provider.tf
+│   ├── README.md
+│   ├── security-grps.tf
+│   ├── variables.tf
+│   └── vpc.tf
+├── terraform-module-website
+│   ├── LICENSE.md
+│   ├── module
+│   │   ├── LICENSE
+│   │   ├── main.tf
+│   │   ├── output.tf
+│   │   ├── README.md
+│   │   └── variables.tf
+│   ├── output.tf
+│   ├── README.md
+│   ├── s3_bucket.tf
+│   ├── variables.tf
+│   └── versions.tf
 ├── terraform_providers
 │   ├── provider.tf
 │   └── README.md
@@ -155,6 +207,6 @@
         ├── variables.tf
         └── vpc.tf
 
-32 directories, 119 files
+41 directories, 163 files
 
 ```
