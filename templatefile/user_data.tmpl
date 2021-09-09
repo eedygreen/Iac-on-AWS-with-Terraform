@@ -1,0 +1,8 @@
+#! /bin/bash
+sudo yum update -y 
+sudo yum install ${package_name} -y
+sudo systemctl enable ${package_name}
+sudo systemctl start ${package_name}
+echo "<h1> Welcome to Iac ! AWS infrastructure created with Terraform in US-East-1 region" </h1>
+
+sudo yum list installed | grep ${package_name} >> /tmp/list-packages-installed.txt
