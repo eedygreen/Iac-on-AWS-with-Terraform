@@ -44,6 +44,7 @@ create_provisioners(){
     for i in ${file_name[@]}
     do
         $(terraform workspace new $i)
+    done
 }
 create_provisioners
 quit
