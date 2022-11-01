@@ -19,9 +19,9 @@ current_workspace()
 
 current_workspace
 
-echo "Selecting provisioner $name ..."
+echo "Selecting workspace $name ..."
 
-select_provisioner()
+select_workspace()
 {
     terraform workspace select $name
 }
@@ -31,5 +31,5 @@ quit()
     exit
 }
 
-select_provisioner
+select_workspace
 quit
