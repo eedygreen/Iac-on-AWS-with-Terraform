@@ -26,8 +26,8 @@ resource "aws_vpc" "my_vpc" {
 
 terraform {
   backend "s3" {
-    bucket = "id=eedy-gcs-backend"
+    bucket = var.bucket
     key    = "value"
-    region = "value"
+    region = var.region
   }
 }
