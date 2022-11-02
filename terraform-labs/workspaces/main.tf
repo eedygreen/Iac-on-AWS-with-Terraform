@@ -27,7 +27,7 @@ resource "aws_vpc" "my_vpc" {
 terraform {
   backend "s3" {
     bucket = var.bucket
-    key    = "value"
+    key    = "path/to/my/tfstatedir/terraform.tfstate"
     region = var.region
   }
 }
