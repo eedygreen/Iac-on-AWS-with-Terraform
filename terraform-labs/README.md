@@ -1,10 +1,10 @@
-# Remote State
+# Manipulating State files
 
 You’ve learned a lot about state so far. You’ve learned that Terraform state is a mapping of infrastructure resources in a Terraform project. You’ve learned that this state is kept by Terraform in a local file, but it can also be saved remotely. You also learned how to inspect state, and import resources into Terraform.
 
 There are some situations when you may have to manipulate state. You may need to move a resource from one address to another. Or, you may want to move resources from one place to another within your configuration. In this lesson, you will learn several techniques for manipulating state in cases like this.
 
-Specifically, in this lab you will get some practice working with these commands:
+Specifically, in this lab you will get some practice workißng with these commands:
 
 terraform plan/apply -replace="<ADDRESS>" - force Terraform to replace a resource. Can use during plan and apply to see see how it will affect your configuration.
 terraform untaint - removes the tainted flag on a resource.
